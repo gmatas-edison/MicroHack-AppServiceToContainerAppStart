@@ -79,6 +79,6 @@ jobs:
           acrPassword: ${{ secrets.ACR_PASSWORD }}
           resourceGroup: microhackwebapp-AppServiceToContainerApp
           containerAppEnvironment: microhackwebapp-containerappenvironment
-          containerAppName: microhackwebapp-containerapp
+          containerAppName: microhackwebapp
           targetPort: 8080
     
