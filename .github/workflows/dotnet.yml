@@ -67,9 +67,7 @@ jobs:
         run: |
           TAG=$(az acr repository show-tags --name microhackwebappregistry --repository microhackwebapp --orderby time_desc --output tsv --detail | head -n 1 | awk '{print $4}')
           NUMERIC_TAG=$(echo "$TAG" | grep -oE '[0-9]+')
-          INCREMENTED_TAG=$((NUMERIC_TAG + 1))
-          UPDATED_TAG=$(echo "$TAG" | sed "s/$NUMERIC_TAG/$INCREMENTED_TAG/")
-          echo "image_tag=$UPDATED_TAG" >> $GITHUB_OUTPUT
+          echo "image_tag=$NUMERIC_TAG" >> $GITHUB_OUTPUT
          
       - name: Deploy to Container App
         uses: azure/container-apps-deploy-action@v2
