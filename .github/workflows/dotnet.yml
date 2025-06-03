@@ -74,7 +74,7 @@ jobs:
       - name: Deploy to Container App
         uses: azure/container-apps-deploy-action@v2
         with:
-          imageToDeploy: microhackwebapp.azurecr.io/microhackwebapp:${{ steps.get_tag.outputs.image_tag }}
+          imageToDeploy: microhackwebappregistry.azurecr.io/microhackwebapp:${{ steps.get_tag.outputs.image_tag }}
           acrUsername: ${{ secrets.ACR_USERNAME }}
           acrPassword: ${{ secrets.ACR_PASSWORD }}
           resourceGroup: microhackwebapp-AppServiceToContainerApp
