@@ -79,4 +79,6 @@ jobs:
           containerAppEnvironment: microhackwebapp-containerappenvironment
           containerAppName: microhackwebapp
           targetPort: 8080
+          environmentVariables: |
+            API_URL=https://microhackaiapp.yellowforest-216b4df3.spaincentral.azurecontainerapps.io/
     
